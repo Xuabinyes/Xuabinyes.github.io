@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decap CMS</title>
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  </head>
+  <body>
+    <script>
+      DecapCms.init({
+        config: {
+          backend: {
+            name: 'github',
+            repo: 'Xuabinyes/Xuabinyes.github.io', // 替换为你的仓库地址
+            branch: 'main', // 你的仓库分支，默认 main 或 master
+          },
+          media_folder: 'source/images/uploads', // 媒体文件存储路径
+          public_folder: '/images/uploads', // 媒体文件访问路径
+          collections: [
+            {
+              name: 'posts',
+              label: '文章',
+              folder: 'source/_posts', // Hexo 文章存储目录
+              create: true,
+              fields: [
+                { label: '标题', name: 'title', widget: 'string' },
+                { label: '日期', name: 'date', widget: 'datetime' },
+                { label: '标签', name: 'tags', widget: 'list' },
+                { label: '分类', name: 'categories', widget: 'list' },
+                { label: '内容', name: 'body', widget: 'markdown' },
+              ],
+            },
+          ],
+        },
+      })
+    </script>
+    
+    <script>
+  DecapCms.init({
+    config: {
+      backend: {
+        name: 'github',
+        repo: 'Xuabinyes/Xuabinyes.github.io',
+        branch: 'main',
+        client_id: 'Ov23liappNhrBLSSoXdJ', 
+        client_secret: '5a9e71d19f857a329d2800e3ecbac67142e9781a', 
+      },
+      // 其余配置保持不变...
+    },
+  })
+</script>
+  </body>
+</html>
