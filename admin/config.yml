@@ -1,0 +1,17 @@
+backend:
+  name: github
+  repo: Xuabinyes/Xuabinyes.github.io # 你的 GitHub 仓库路径（用户名/仓库名）
+  branch: main # 仓库分支，默认 main 或 master
+media_folder: source/images/uploads
+public_folder: /images/uploads
+collections:
+  - name: posts
+    label: 文章
+    folder: source/_posts
+    create: true
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "日期", name: "date", widget: "datetime" }
+      - { label: "标签", name: "tags", widget: "list" }
+      - { label: "分类", name: "categories", widget: "list" }
+      - { label: "内容", name: "body", widget: "markdown" }
